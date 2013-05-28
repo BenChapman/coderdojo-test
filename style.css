@@ -21,21 +21,18 @@ html,body {
 	padding-top: 30px;
 }
 
-#find-yours-box {
+.content-box {
 	width: 60%;
 	margin: 30px auto;
 	padding: 5%;
 	background-color: #FFF;
-	opacity: 50%;
 }
-#find-yours-box:after {
-    content:" ";
-    clear:both;
-    display:block;
-}
-#find-yours-box h1 {
+.content-box h1 {
 	font-weight:300;
 	font-size: 3em;
+}
+.content-box p {
+	line-height: 1.75em;
 }
 #find-yours-box #find-yours-form input[type=text] {
 	margin: 20px auto;
