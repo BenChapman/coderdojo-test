@@ -4,24 +4,15 @@
 
 html,body {
 	height:100%;
+	background: url('paper_fibers.png');
 	font-family: "Open Sans", sans-serif;
 }
-#background-image {
-	position: absolute;
-	top:0;left:0;
-	height: 100%;
-	width: 100%;
-	background: url('background.png') repeat-y;
-	-webkit-filter: blur(20px);
-	z-index:-100;
-}
-
 .full-width-box {
 	width: 100%;
 	height: 350px;
 }
 #logo-box {
-	background: #333;
+	background: url('binding_dark.png');
 	height: 175px;
 }
 #logo-box img {
@@ -35,6 +26,7 @@ html,body {
 	margin: 30px auto;
 	padding: 5%;
 	background-color: #FFF;
+	opacity: 50%;
 }
 #find-yours-box:after {
     content:" ";
