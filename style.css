@@ -4,7 +4,7 @@
 
 html,body {
 	height:100%;
-	background: url('paper_fibers.png');
+	background: url('img/paper_fibers.png');
 	font-family: "Open Sans", sans-serif;
 }
 .full-width-box {
@@ -12,7 +12,7 @@ html,body {
 	height: 350px;
 }
 #logo-box {
-	background: url('binding_dark.png');
+	background: url('img/binding_dark.png');
 	height: 175px;
 }
 #logo-box img {
