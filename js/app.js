@@ -8,7 +8,8 @@ function initialize() {
     center: new google.maps.LatLng(25,0),
     zoom: 2,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-	streetViewControl: false
+	streetViewControl: false,
+	scrollwheel: false
   };
   map = new google.maps.Map(document.getElementById("map-box"), mapOptions);
   for(var i in data) {
