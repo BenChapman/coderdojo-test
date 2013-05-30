@@ -36,7 +36,9 @@ function codeAddress(myLocation) {
 		  latitude:results[0].geometry.location.jb,
 		  longitude: results[0].geometry.location.kb
 	  },data);
-	  console.log(closest);
+	  document.getElementById('closest-location').innerHTML = "<a href='http://zen.coderdojo.com/dojo/"+data[closest.key].id+"'>"+closest.key+"</a> which is "+(closest.distance/1000).toFixed(1)+"KM away.";
+	  document.getElementById('closest-title').style.display = "inherit";
+	  document.getElementById('closest-location').style.display = "inherit";
       map.setCenter(new google.maps.LatLng(closest.latitude,closest.longitude));
 	  map.setZoom(12);
     } else {
@@ -49,6 +51,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 window.addEventListener('load',function() {
 	document.getElementById("location").addEventListener('change',function(){
 		myLocation = this.value;
-		codeAddress(myLocation)
+		codeAddress(myLocation);
 	})
 });
