@@ -13,9 +13,9 @@ function initialize() {
 	scrollwheel: false
   };
   map = new google.maps.Map(document.getElementById("map-box"), mapOptions);
-  for(var i in data.features) {
+  for(var i in data) {
 	  markers[i] = new google.maps.Marker({
-	      position: new google.maps.LatLng(data.features[i].geometry.coordinates[1],data.features[i].geometry.coordinates[0]),
+	      position: new google.maps.LatLng(data[i].latitude,data[i].longitude),
 	      map: map,
 	      title: i,
 		  clickable: true,
