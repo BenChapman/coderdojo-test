@@ -34,8 +34,8 @@ function codeAddress(myLocation) {
   geocoder.geocode( { 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
 	  var closest = geolib.findNearest({
-		  latitude:results[0].geometry.location.jb,
-		  longitude: results[0].geometry.location.kb
+		  latitude: results[0].geometry.location.lat(),
+		  longitude: results[0].geometry.location.lng()
 	  },data);
 	  document.getElementById('closest-location').innerHTML = "<a href='http://zen.coderdojo.com/dojo/"+data[closest.key].id+"'>"+closest.key+"</a> which is "+(closest.distance/1000).toFixed(1)+"KM away.";
 	  document.getElementById('closest-title').style.display = "inherit";
