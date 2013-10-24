@@ -1,6 +1,7 @@
 var map;
 var markers = [];
 var geocoder;
+var data;
 
 function initialize() {
   geocoder = new google.maps.Geocoder();
@@ -12,9 +13,9 @@ function initialize() {
 	scrollwheel: false
   };
   map = new google.maps.Map(document.getElementById("map-box"), mapOptions);
-  for(var i in data) {
+  for(var i in data.features) {
 	  markers[i] = new google.maps.Marker({
-	      position: new google.maps.LatLng(data[i].latitude,data[i].longitude),
+	      position: new google.maps.LatLng(data.features[i].geometry.coordinates[1],data.features[i].geometry.coordinates[0]),
 	      map: map,
 	      title: i,
 		  clickable: true,
@@ -29,6 +30,11 @@ function initialize() {
 	  });
   }
 }
+
+function DojoList(dojos) {
+	data = dojos;
+}
+
 function codeAddress(myLocation) {
   var address = myLocation;
   geocoder.geocode( { 'address': address}, function(results, status) {
